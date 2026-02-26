@@ -145,7 +145,7 @@ export default function Home() {
               Instagram
             </a>
           </div>
-          <p className="text-xs text-white/25">
+          <p suppressHydrationWarning className="text-xs text-white/25">
             © {new Date().getFullYear()} Cocon. Todos los derechos reservados.
           </p>
           <p className="text-[10px] text-white/15 max-w-md mx-auto">

@@ -4,8 +4,10 @@ import { useEffect, useState } from 'react'
 
 export function WhatsAppButton() {
     const [visible, setVisible] = useState(false)
+    const [isMounted, setIsMounted] = useState(false)
 
     useEffect(() => {
+        setIsMounted(true)
         const handleScroll = () => {
             // Show after scrolling 300px
             setVisible(window.scrollY > 300)
@@ -19,6 +21,8 @@ export function WhatsAppButton() {
         'Hola, me interesa saber más sobre las gomitas Cocon para dormir 🌙'
     )
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+
+    if (!isMounted) return null
 
     return (
         <a
