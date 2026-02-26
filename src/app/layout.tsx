@@ -50,7 +50,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es-CO" className={inter.variable}>
-      <head>
+      <body className="bg-[#0D0D1A] text-white antialiased font-sans">
+        {children}
         {GOOGLE_ADS_ID && GOOGLE_ADS_ID !== 'AW-XXXXXXXXX' && (
           <>
             <Script
@@ -67,9 +68,6 @@ export default function RootLayout({
             </Script>
           </>
         )}
-      </head>
-      <body className="bg-[#0D0D1A] text-white antialiased font-sans">
-        {children}
       </body>
     </html>
   )
