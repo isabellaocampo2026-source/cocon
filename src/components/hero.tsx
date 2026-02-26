@@ -39,9 +39,13 @@ export function Hero() {
             <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#7C3AED]/10 blur-[120px] pointer-events-none" />
 
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-                {/* Moon emoji as visual anchor */}
-                <div className="text-7xl sm:text-8xl mb-8 animate-[float_3s_ease-in-out_infinite]">
-                    🌙
+                {/* Product image as visual anchor */}
+                <div className="mb-8 animate-[float_3s_ease-in-out_infinite]">
+                    <img
+                        src="/paquete_gomitas.png"
+                        alt="Paquete de gomitas Cocon"
+                        className="w-32 sm:w-40 mx-auto drop-shadow-[0_0_30px_rgba(124,58,237,0.5)]"
+                    />
                 </div>
 
                 {/* Headline */}
