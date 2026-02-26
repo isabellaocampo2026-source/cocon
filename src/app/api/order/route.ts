@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabase'
+import { getSupabase } from '@/lib/supabase'
 import { PRICES } from '@/lib/constants'
 
 // Simple input sanitizer
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
         }
 
         // Insert into Supabase
-        const { error: dbError } = await supabase.from('orders').insert({
+        const { error: dbError } = await getSupabase().from('orders').insert({
             full_name: sanitize(fullName),
             phone: phone.trim(),
             city: sanitize(city),
