@@ -14,15 +14,15 @@ export default function GraciasPage() {
         <main className="min-h-screen flex items-center justify-center p-6 bg-base-bg relative overflow-hidden">
             {/* Conversion tracking */}
             {GOOGLE_ADS_ID && GOOGLE_ADS_ID !== 'AW-XXXXXXXXX' && CONVERSION_LABEL && (
-                <Script id="conversion" strategy="afterInteractive">
+                <Script id="conversion" strategy="lazyOnload">
                     {`
-            if (typeof gtag === 'function') {
-              gtag('event', 'conversion', {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('event', 'conversion', {
                 send_to: '${GOOGLE_ADS_ID}/${CONVERSION_LABEL}',
                 value: 89900,
                 currency: 'COP'
-              });
-            }
+            });
           `}
                 </Script>
             )}

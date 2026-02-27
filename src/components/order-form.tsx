@@ -112,14 +112,7 @@ export function OrderForm() {
             if (res.ok && data.success) {
                 // Fire Google Ads conversion
                 const selectedVariant = VARIANTS.find((v) => v.id === variant)
-                if (typeof window !== 'undefined' && typeof (window as unknown as { gtag: (...args: unknown[]) => void }).gtag === 'function') {
-                    const gtag = (window as unknown as { gtag: (...args: unknown[]) => void }).gtag
-                    gtag('event', 'conversion', {
-                        send_to: `${process.env.NEXT_PUBLIC_GOOGLE_ADS_ID}/${process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL}`,
-                        value: selectedVariant?.total,
-                        currency: 'COP',
-                    })
-                }
+                // Conversion tracking is handled strictly on the /gracias page now to avoid duplicates.
                 router.push('/gracias')
             } else {
                 setError(data.error || 'Error al enviar. Intenta de nuevo.')
