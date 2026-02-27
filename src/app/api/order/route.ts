@@ -46,28 +46,34 @@ export async function POST(req: NextRequest) {
             )
         }
 
-        // Insert into Supabase
-        const { error: dbError } = await getSupabase().from('orders').insert({
-            full_name: sanitize(fullName),
-            phone: phone.trim(),
-            city: sanitize(city),
-            address: sanitize(address),
-            product_variant: productVariant,
-            total_price: PRICES[productVariant],
-            utm_source: body.utmSource || null,
-            utm_medium: body.utmMedium || null,
-            utm_campaign: body.utmCampaign || null,
-            utm_term: body.utmTerm || null,
-            landing_url: body.landingUrl || null,
-            gclid: body.gclid || null,
-        })
+        // Try to insert into Supabase if configured
+        const supabase = getSupabase()
 
-        if (dbError) {
-            console.error('Supabase insert error:', dbError)
-            return NextResponse.json(
-                { error: 'Error al guardar el pedido. Intenta de nuevo.' },
-                { status: 500 }
-            )
+        if (supabase) {
+            const { error: dbError } = await supabase.from('orders').insert({
+                full_name: sanitize(fullName),
+                phone: phone.trim(),
+                city: sanitize(city),
+                address: sanitize(address),
+                product_variant: productVariant,
+                total_price: PRICES[productVariant],
+                utm_source: body.utmSource || null,
+                utm_medium: body.utmMedium || null,
+                utm_campaign: body.utmCampaign || null,
+                utm_term: body.utmTerm || null,
+                landing_url: body.landingUrl || null,
+                gclid: body.gclid || null,
+            })
+
+            if (dbError) {
+                console.error('Supabase insert error:', dbError)
+                return NextResponse.json(
+                    { error: 'Error al guardar el pedido. Intenta de nuevo.' },
+                    { status: 500 }
+                )
+            }
+        } else {
+            console.log('Skipping DB insert - Supabase not configured. Proceeding with order anyway.')
         }
 
         return NextResponse.json({ success: true })

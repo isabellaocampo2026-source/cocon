@@ -9,7 +9,8 @@ export function getSupabase(): SupabaseClient {
         const key = process.env.SUPABASE_SERVICE_ROLE_KEY
 
         if (!url || !key) {
-            throw new Error('Missing Supabase environment variables')
+            console.warn('⚠️ Missing Supabase environment variables. Database features will be disabled.')
+            return null as any
         }
 
         _supabase = createClient(url, key)
