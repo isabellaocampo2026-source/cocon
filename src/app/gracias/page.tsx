@@ -11,9 +11,10 @@ export default function GraciasPage() {
         // En Next.js App Router, usar useEffect asegura que el código se ejecute
         // incluso en navegaciones internas "suaves" (como cuando vienen de order-form.tsx)
         if (GOOGLE_ADS_ID && GOOGLE_ADS_ID !== 'AW-XXXXXXXXX' && CONVERSION_LABEL) {
-            window.dataLayer = window.dataLayer || []
+            const w = window as any
+            w.dataLayer = w.dataLayer || []
             function gtag(...args: any[]) {
-                window.dataLayer.push(arguments)
+                w.dataLayer.push(arguments)
             }
             gtag('event', 'conversion', {
                 send_to: `${GOOGLE_ADS_ID}/${CONVERSION_LABEL}`,
