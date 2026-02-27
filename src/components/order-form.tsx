@@ -196,7 +196,7 @@ export function OrderForm() {
                                             )}
                                         </div>
                                         {v.shipping === 0 ? (
-                                            <span className="block text-sm font-semibold text-accent-green">
+                                            <span className="block text-sm font-semibold text-brand">
                                                 Envío Gratis
                                             </span>
                                         ) : (
@@ -349,9 +349,9 @@ export function OrderForm() {
                     <button
                         type="submit"
                         disabled={loading || !isFormComplete}
-                        className="w-full py-5 rounded-xl bg-accent-green text-white font-black text-lg sm:text-xl
-              transition-all duration-300 shadow-lg shadow-accent-green/20
-              hover:bg-accent-greenHover hover:shadow-accent-green/40 hover:-translate-y-0.5
+                        className="w-full py-5 rounded-xl bg-brand text-white font-black text-lg sm:text-xl
+              transition-all duration-300 shadow-lg shadow-brand/30
+              hover:brightness-110 hover:-translate-y-0.5
               disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none disabled:hover:translate-y-0
               active:scale-[0.98]"
                     >

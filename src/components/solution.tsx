@@ -80,7 +80,7 @@ export function Solution() {
                             className="fade-section bg-white p-8 rounded-2xl shadow-sm border border-brand-lighter text-center group hover:-translate-y-1 transition-transform duration-300"
                             style={{ transitionDelay: `${index * 150}ms` }}
                         >
-                            <div className="w-14 h-14 mx-auto rounded-full bg-brand/5 text-brand flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                            <div className="w-14 h-14 mx-auto rounded-full bg-brand text-white flex items-center justify-center mb-6 shadow-md shadow-brand/20 group-hover:scale-110 transition-transform">
                                 {item.icon}
                             </div>
                             <h3 className="text-xl font-bold mb-3 text-base-text">

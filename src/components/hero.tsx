@@ -24,18 +24,7 @@ export function Hero() {
                                 alt="Cocon Gomitas de Melatonina"
                                 className="relative z-10 w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                             />
-                            {/* Trust Badge overlay */}
-                            <div className="absolute -bottom-6 -left-4 lg:-left-8 bg-white px-4 py-3 rounded-xl shadow-card flex items-center gap-3 border border-gray-100 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-                                <span className="bg-brand-lighter text-brand p-2 rounded-full flex items-center justify-center">
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                </span>
-                                <div className="text-left">
-                                    <p className="text-xs font-semibold text-base-text">Alta Calidad</p>
-                                    <p className="text-[10px] text-base-muted">Ingredientes naturales</p>
-                                </div>
-                            </div>
+                            {/* Trust Badge overlay REMOVED */}
                         </div>
                     </div>
 
@@ -51,7 +40,7 @@ export function Hero() {
                                     </svg>
                                 ))}
                             </div>
-                            <span className="text-sm font-medium text-base-text underline decoration-gray-300 underline-offset-4 cursor-pointer hover:text-brand transition-colors">4.9/5 (2,104 reseñas)</span>
+                            <span className="text-sm font-medium text-base-text underline decoration-gray-300 underline-offset-4 cursor-pointer hover:text-brand transition-colors">4.9/5 (97 reseñas)</span>
                         </div>
 
                         {/* Main Headline */}
@@ -72,8 +61,8 @@ export function Hero() {
                                 'Pago contra entrega en todo Colombia'
                             ].map((benefit, i) => (
                                 <li key={i} className="flex items-start gap-3">
-                                    <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-accent-green/10 flex items-center justify-center">
-                                        <svg className="w-3.5 h-3.5 text-accent-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                                    <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-brand flex items-center justify-center">
+                                        <svg className="w-3.5 h-3.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                                             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                                         </svg>
                                     </span>
@@ -86,10 +75,10 @@ export function Hero() {
                         <div className="bg-white p-6 rounded-2xl shadow-card border border-gray-100">
                             <button
                                 onClick={scrollToForm}
-                                className="w-full flex items-center justify-center gap-2 bg-accent-green text-white text-lg font-bold py-4 px-8 rounded-xl hover:bg-accent-greenHover transition-all transform active:scale-[0.98] shadow-lg shadow-accent-green/30"
+                                className="w-full flex items-center justify-center gap-2 bg-brand text-white text-lg font-bold py-4 px-8 rounded-xl hover:brightness-110 transition-all transform active:scale-[0.98] shadow-lg shadow-brand/30"
                             >
                                 Haz tu pedido ahora
-                                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
                             </button>

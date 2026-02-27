@@ -69,11 +69,11 @@ export function Comparison() {
                                 {row.criteria}
                             </div>
                             <div className="p-4 sm:p-6 text-center flex items-center justify-center gap-2">
-                                <span className="text-accent-red font-bold">✕</span>
+                                <span className="w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center font-bold text-xs mt-0.5 flex-shrink-0">✕</span>
                                 <span className="text-base-muted text-sm">{row.pills}</span>
                             </div>
                             <div className="p-4 sm:p-6 text-center bg-brand-lighter/20 flex items-center justify-center gap-2">
-                                <span className="text-accent-green font-bold text-lg">✓</span>
+                                <span className="w-6 h-6 rounded-full bg-brand text-white flex items-center justify-center font-bold text-xs mt-0.5 flex-shrink-0">✓</span>
                                 <span className="text-base-text text-sm font-semibold">{row.cocon}</span>
                             </div>
                         </div>

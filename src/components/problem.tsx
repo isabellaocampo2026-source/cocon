@@ -71,7 +71,7 @@ export function Problem() {
                             style={{ transitionDelay: `${index * 100}ms` }}
                         >
                             <div className="flex-shrink-0 mt-1">
-                                <div className="w-8 h-8 rounded-full bg-brand-lighter text-brand flex items-center justify-center font-bold">
+                                <div className="w-8 h-8 rounded-full bg-brand text-white flex items-center justify-center font-bold">
                                     ✕
                                 </div>
                             </div>
