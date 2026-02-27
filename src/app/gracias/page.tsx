@@ -53,7 +53,7 @@ export default function GraciasPage() {
                 {/* Action buttons */}
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <a
-                        href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '573000000000'}`}
+                        href="https://wa.me/573053476462"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[#25D366] text-white font-semibold rounded-xl hover:bg-[#22c55e] transition-all duration-200 hover:scale-105 text-sm"

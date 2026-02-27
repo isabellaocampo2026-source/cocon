@@ -128,7 +128,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center space-y-4">
           <div className="flex items-center justify-center gap-6 text-sm text-white/40">
             <a
-              href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '573000000000'}`}
+              href="https://wa.me/573053476462"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white/70 transition"

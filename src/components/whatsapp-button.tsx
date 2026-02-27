@@ -16,7 +16,7 @@ export function WhatsAppButton() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
-    const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '573000000000'
+    const whatsappNumber = '573053476462'
     const whatsappMessage = encodeURIComponent(
         'Hola, me interesa saber más sobre las gomitas Cocon para dormir 🌙'
     )
