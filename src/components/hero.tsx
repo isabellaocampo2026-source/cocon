@@ -15,10 +15,10 @@ export function Hero() {
                 <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
 
                     {/* Left Column: Product Image Gallery / Hero Shot */}
-                    <div className="relative mb-12 lg:mb-0 flex justify-center">
-                        <div className="relative w-full max-w-md">
+                    <div className="relative mb-12 lg:mb-0 flex justify-center items-center">
+                        <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-[120%] lg:-ml-8 xl:-ml-12 lg:scale-105 transition-transform duration-700">
                             {/* Backdrop highlight for the product */}
-                            <div className="absolute inset-0 bg-brand-lighter rounded-full transform scale-90 blur-2xl opacity-60"></div>
+                            <div className="absolute inset-0 bg-brand-lighter rounded-full transform scale-90 blur-3xl opacity-60"></div>
                             <img
                                 src="/paquete_gomitas.png"
                                 alt="Cocon Gomitas de Melatonina"
