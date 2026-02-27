@@ -20,6 +20,7 @@ export default function GraciasPage() {
                 send_to: `${GOOGLE_ADS_ID}/${CONVERSION_LABEL}`,
                 value: 89900,
                 currency: 'COP',
+                transaction_id: new Date().getTime().toString()
             })
             console.log('✅ Google Ads Conversion disparada con éxito:', GOOGLE_ADS_ID, CONVERSION_LABEL)
         }
