@@ -2,7 +2,7 @@
 export const VARIANTS = [
   {
     id: '1-frasco',
-    label: '1 Frasco (30 gomitas)',
+    label: '1 Paquete (30 gomitas)',
     price: 49900,
     shipping: 9900,
     total: 59800,
@@ -11,7 +11,7 @@ export const VARIANTS = [
   },
   {
     id: '2-frascos',
-    label: '2 Frascos (60 gomitas)',
+    label: '2 Paquetes (60 gomitas)',
     price: 89900,
     shipping: 0,
     total: 89900,
@@ -20,7 +20,7 @@ export const VARIANTS = [
   },
   {
     id: '3-frascos',
-    label: '3 Frascos (90 gomitas)',
+    label: '3 Paquetes (90 gomitas)',
     price: 119900,
     shipping: 0,
     total: 119900,
@@ -118,7 +118,7 @@ export const TESTIMONIALS = [
   {
     name: 'Andrés R.',
     city: 'Medellín',
-    text: 'Probé tés, pastillas y de todo. Esto es diferente: sabe rico, es natural, y funciona desde la primera noche. Ya voy por mi segundo frasco.',
+    text: 'Probé tés, pastillas y de todo. Esto es diferente: sabe rico, es natural, y funciona desde la primera noche. Ya voy por mi segundo paquete.',
     rating: 5,
   },
   {

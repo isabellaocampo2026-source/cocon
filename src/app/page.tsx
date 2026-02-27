@@ -25,7 +25,7 @@ function StructuredData() {
     offers: [
       {
         '@type': 'Offer',
-        name: '1 Frasco (30 gomitas)',
+        name: '1 Paquete (30 gomitas)',
         price: '49900',
         priceCurrency: 'COP',
         availability: 'https://schema.org/InStock',
@@ -48,7 +48,7 @@ function StructuredData() {
       },
       {
         '@type': 'Offer',
-        name: '2 Frascos (60 gomitas)',
+        name: '2 Paquetes (60 gomitas)',
         price: '89900',
         priceCurrency: 'COP',
         availability: 'https://schema.org/InStock',
@@ -63,7 +63,7 @@ function StructuredData() {
       },
       {
         '@type': 'Offer',
-        name: '3 Frascos (90 gomitas)',
+        name: '3 Paquetes (90 gomitas)',
         price: '119900',
         priceCurrency: 'COP',
         availability: 'https://schema.org/InStock',
