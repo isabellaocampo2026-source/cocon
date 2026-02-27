@@ -31,10 +31,7 @@ export default function GraciasPage() {
             <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-brand/5 blur-[100px] pointer-events-none" />
 
             <div className="relative text-center max-w-md animate-[fade-in_0.8s_ease-out] bg-white p-8 sm:p-10 rounded-3xl shadow-card border border-gray-100 z-10 block">
-                {/* Moon/Success Icon */}
-                <div className="w-20 h-20 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-6 animate-[float_3s_ease-in-out_infinite]">
-                    <span className="text-4xl">🌙</span>
-                </div>
+
 
                 <h1 className="text-3xl sm:text-4xl font-black mb-4 text-base-text tracking-tight">
                     ¡Pedido Confirmado!
