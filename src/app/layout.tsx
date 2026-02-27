@@ -10,21 +10,21 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Cocon | El Cóctel del Sueño (Magnesio, Teanina, Apigenina)',
+  title: 'Cocon | Duerme profundo toda la noche, 100% natural',
   description:
-    'El suplemento nocturno definitivo en polvo. Nutrición cerebral para un descanso profundo sin hormonas ni resaca. Pago contra entrega en toda Colombia.',
+    'La bebida relajante sin químicos que te ayuda a dormir fácil y despertar con energía. Sin resaca y sin dependencia. Pago contra entrega en Colombia.',
   keywords: [
-    'magnesio para dormir',
-    'l-teanina ansiedad',
-    'apigenina',
-    'sleep cocktail colombia',
-    'suplemento sueño natural',
+    'bebida para dormir',
+    'como dormir rapido',
+    'magnesio natural',
+    'remedios para el insomnio',
+    'suplemento natural sin quimicos',
   ],
   authors: [{ name: 'Cocon' }],
   openGraph: {
-    title: 'Cocon | Sleep Cocktail — Duerme Profundo',
+    title: 'Cocon | Duerme Fácil y Sin Químicos',
     description:
-      'El Cóctel del Sueño (Huberman Stack). Nutrición cerebral sin dependencia.',
+      'Bebida relajante natural para dormir profundo sin depender de pastillas.',
     url: 'https://cocon.co',
     siteName: 'Cocon',
     locale: 'es_CO',
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cocon | Sleep Cocktail Cocon',
+    title: 'Cocon | Bebida Natural para Dormir',
     description:
-      'Descanso profundo y óptimo. Bebida relajante natural de absorción inmediata.',
+      'Descansa de verdad sin químicos. Absorción ultrarrápida.',
   },
   robots: {
     index: true,

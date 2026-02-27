@@ -3,11 +3,10 @@
 import { useEffect, useRef } from 'react'
 
 const ROWS = [
-    { criteria: 'Mecanismo', pills: 'Sedación forzada (Hormonas agregadas)', cocon: 'Nutrición cerebral natural' },
-    { criteria: 'Uso a largo plazo', pills: 'Genera tolerancia y dependencia', cocon: 'Optimiza tu salud (Uso diario recomendado)' },
-    { criteria: 'Energía al despertar', pills: '"Resaca" fisiológica y niebla mental', cocon: 'Fresco y totalmente recuperado' },
-    { criteria: 'Formato', pills: 'Pastillas difíciles de asimilar', cocon: 'Bebida relajante de absorción rápida' },
-    { criteria: 'Ingredientes principales', pills: 'Melatonina sintética o químicos', cocon: 'Magnesio + Teanina + Manzanilla' },
+    { criteria: 'Ingredientes', pills: 'Químicos sintéticos y fármacos', cocon: '100% Minerales y extractos naturales' },
+    { criteria: 'Despertar al día siguiente', pills: 'Sensación de pesadez o "resaca"', cocon: 'Mente clara y cuerpo descansado' },
+    { criteria: 'Uso frecuente', pills: 'Genera tolerancia y dependencia', cocon: 'Nutritivo y seguro a diario' },
+    { criteria: 'Absorción', pills: 'Las pastillas demoran en digerirse', cocon: 'Bebida de acción casi inmediata' },
 ]
 
 export function Comparison() {
@@ -39,10 +38,10 @@ export function Comparison() {
             <div className="max-w-4xl mx-auto">
                 <div className="fade-section text-center mb-16">
                     <span className="text-brand font-bold tracking-wider uppercase text-sm mb-3 block">
-                        Nutrición vs Sedación
+                        Lo Artificial vs Lo Natural
                     </span>
                     <h2 className="text-3xl sm:text-5xl font-bold text-base-text">
-                        Por qué elegir <span className="text-brand">Cocon</span>
+                        Por qué funciona <span className="text-brand">Cocon</span>
                     </h2>
                 </div>
 
@@ -51,10 +50,10 @@ export function Comparison() {
                     <div className="grid grid-cols-3 border-b border-brand-lighter bg-base-bg">
                         <div className="p-4 sm:p-6" />
                         <div className="p-4 sm:p-6 text-center text-base-muted text-xs sm:text-sm font-bold uppercase tracking-wider">
-                            Somníferos & Melatonina
+                            Somníferos & Pastillas
                         </div>
                         <div className="p-4 sm:p-6 text-center bg-brand-lighter/50 text-brand text-xs sm:text-sm font-bold uppercase tracking-wider">
-                            Sleep Cocktail Cocon
+                            Bebida Cocon
                         </div>
                     </div>
 

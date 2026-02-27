@@ -22,7 +22,7 @@ export function Hero() {
                             {/* Placeholder for the new powder tub image */}
                             <img
                                 src="/paquete_gomitas.png"
-                                alt="Cocon Sleep Cocktail Polvo"
+                                alt="Cocon Bebida Relajante"
                                 className="relative z-10 w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                             />
                         </div>
@@ -40,25 +40,25 @@ export function Hero() {
                                     </svg>
                                 ))}
                             </div>
-                            <span className="text-sm font-medium text-base-text underline decoration-gray-300 underline-offset-4 cursor-pointer hover:text-brand transition-colors">4.9/5 (97 reseñas)</span>
+                            <span className="text-sm font-medium text-base-text underline decoration-gray-300 underline-offset-4 cursor-pointer hover:text-brand transition-colors">4.8/5 (97 reseñas)</span>
                         </div>
 
                         {/* Main Headline */}
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] text-base-text tracking-tight mb-6">
-                            Nutre tu cerebro y <span className="text-brand">optimiza tu descanso.</span>
+                            Duerme profundo, <br /><span className="text-brand">100% natural.</span>
                         </h1>
 
                         {/* Subheadline */}
                         <p className="text-lg text-base-muted mb-8 max-w-xl leading-relaxed">
-                            El <strong>Cóctel del Sueño</strong> (Huberman Stack) en polvo. Magnesio, L-Teanina y Apigenina para un sueño profundo y recuperación celular. <br /><br /><strong>0% hormonas, 0% resaca, 100% natural.</strong>
+                            Una bebida relajante de rápida acción que apaga tu mente al final del día. <strong>Cero químicos, cero pastillas fuertes y libre de resaca al despertar.</strong>
                         </p>
 
                         {/* Quick Benefits / Bullet Points */}
                         <ul className="space-y-3 mb-10">
                             {[
-                                'Absorción ultra-rápida (1 scoop en agua)',
-                                'Sabor refrescante a mora azul',
-                                'Pago contra entrega en todo Colombia'
+                                'Concilia el sueño en menos de 30 minutos',
+                                'Ingredientes seguros y sin dependencia',
+                                'Pagas al recibir en todo Colombia'
                             ].map((benefit, i) => (
                                 <li key={i} className="flex items-start gap-3">
                                     <span className="mt-0.5 flex-shrink-0 w-5 h-5 rounded-full bg-brand flex items-center justify-center">
@@ -77,7 +77,7 @@ export function Hero() {
                                 onClick={scrollToForm}
                                 className="w-full flex items-center justify-center gap-2 bg-brand text-white text-lg font-bold py-4 px-8 rounded-xl hover:brightness-110 transition-all transform active:scale-[0.98] shadow-lg shadow-brand/30"
                             >
-                                Haz tu pedido ahora
+                                Quiero dormir mejor hoy
                                 <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>
@@ -87,7 +87,7 @@ export function Hero() {
                                     <svg className="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                     </svg>
-                                    <span>Garantía 30 días</span>
+                                    <span>Garantía de Satisfacción</span>
                                 </div>
                                 <div className="flex items-center gap-1.5">
                                     <svg className="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">

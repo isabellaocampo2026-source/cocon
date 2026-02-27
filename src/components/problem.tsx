@@ -5,19 +5,19 @@ import { useEffect, useRef } from 'react'
 const PAIN_POINTS = [
     {
         title: 'Horas dando vueltas',
-        desc: 'Tu mente no se apaga aunque tu cuerpo esté agotado físicamente.',
+        desc: 'Tu cuerpo está muy cansado, pero tu mente simplemente no se apaga.',
     },
     {
-        title: 'Despertar a medias',
-        desc: 'Sientes que no descansaste nada y la fatiga te arrastra por el resto del día.',
+        title: 'Despertar agotado',
+        desc: 'Sientes que no descansaste nada en toda la noche y la fatiga te persigue todo el día.',
     },
     {
-        title: 'Soluciones a medias',
-        desc: 'Ya probaste tés de supermercado que no hacen efecto o pastillas que dañan el estómago.',
+        title: 'Miedo a depender',
+        desc: 'No quieres volverte esclavo de una pastilla diaria solo para poder dormir.',
     },
     {
-        title: 'Resaca de melatonina',
-        desc: 'Dependes de químicos o de hormonas sintéticas que atrofian tu producción natural y te dejan atontado al despertar.',
+        title: 'La resaca de las pastillas',
+        desc: 'Forzar el sueño con químicos o melatonina artificial te deja atontado y con "niebla mental" a la mañana siguiente.',
     },
 ]
 
@@ -51,13 +51,13 @@ export function Problem() {
                 {/* Section heading */}
                 <div className="fade-section text-center mb-16">
                     <span className="text-brand font-bold tracking-wider uppercase text-sm mb-3 block">
-                        El Problema
+                        El Problema Real
                     </span>
                     <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-base-text tracking-tight">
-                        Dar vueltas a las 3:00 AM <br className="hidden sm:block" /> atrofia tu cuerpo y mente.
+                        Forzar el sueño con químicos <br className="hidden sm:block" /> te está pasando factura.
                     </h2>
                     <p className="text-lg text-base-muted max-w-2xl mx-auto">
-                        Depender de somníferos o forzar el sueño con pastillas hormonales no resuelve la raíz del problema. Tu cerebro simplemente está desnutrido de los minerales que lo relajan.
+                        Las pastillas fuertes y los somníferos de farmacia te "apagan" a la fuerza, pero no te dan un descanso real. Por eso despiertas casado.
                     </p>
                 </div>
 

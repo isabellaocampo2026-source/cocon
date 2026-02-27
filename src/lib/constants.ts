@@ -69,41 +69,38 @@ export const COLOMBIAN_CITIES = [
 
 // WhatsApp config
 export const WHATSAPP_NUMBER = '573053476462' // Replaced with their actual number from the previous code
-export const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hola, me interesa saber más sobre el Sleep Cocktail Cocon 🌙'
-)
 
 // FAQ data
 export const FAQ_ITEMS = [
   {
-    question: '¿Qué es exactamente el "Sleep Cocktail" de Cocon?',
+    question: '¿Qué es exactamente Cocon?',
     answer:
-      'Es la evolución científica del descanso. Desarrollamos una bebida nocturna en polvo basada en los protocolos de neurociencia modernos: combina Magnesio, L-Teanina (extracto de té verde) y Apigenina (extracto de manzanilla). Son los nutrientes exactos que tu cerebro necesita para relajarse profundamente de forma natural.',
+      'Es una bebida relajante 100% natural. Está hecha en polvo a base de magnesio y extractos de plantas milenarias que te ayudan a dormir profundamente y sin interrupciones, pero sin usar ningún químico.',
   },
   {
-    question: 'Si no tiene melatonina, ¿sí funciona para dormir?',
+    question: 'Si no tiene químicos, ¿sí funciona para dormir?',
     answer:
-      '¡Funciona mejor y más sano a largo plazo! La melatonina es una hormona que tu cerebro ya produce; si la tomas en pastillas seguido, le dices a tu cuerpo que deje de producirla. Nuestro cóctel le da a tu cuerpo los nutrientes esenciales (Magnesio y Teanina) para que PUEDA producir su propia melatonina potente y te despiertes con energía, no atontado.',
+      '¡Sí! Y es mucho mejor para ti. En lugar de "noquearte" artificialmente como las pastillas comunes, Cocon relaja tus músculos y sistema nervioso de forma natural. Te ayuda a quedarte dormido rápido y lo mejor de todo: sin despertar cansado.',
   },
   {
-    question: '¿Por qué viene en polvo y no en pastillas?',
+    question: '¿Cocon me va a crear dependencia?',
     answer:
-      'Pura ciencia de asimilación. Para llegar a las dosis clínicas efectivas que realmente relajan tus músculos y cerebro, las pastillas tendrían que ser gigantescas (o tendrías que tomarte unas 6 a la vez). Nuestro formato en polvo "tipo pre-workout nocturno" de 1 scoop se disuelve riquísimo, el cuerpo lo asimila 3 veces más rápido y no maltrata el estómago con cápsulas plásticas.',
+      'Absolutamente no. Al no tener fármacos, melatonina artificial ni sedantes fuertes, tu cuerpo nunca se vuelve adicto. Puedes tomarlo solo las noches que sientas estrés, o tomarlo todas las noches con total seguridad.',
   },
   {
-    question: '¿Puedo tomarlo todos los días aunque no tenga insomnio?',
+    question: '¿Por qué viene en bebida y no en pastillas?',
     answer:
-      '¡Absolutamente SÍ! De hecho, es lo más recomendado en el biohacking. El magnesio es clave para la recuperación muscular en deportistas, salud ósea y claridad mental. Es alimento puro, así que puedes tomarlo a diario por años para optimizar tu salud, sin miedo a generar tolerancia.',
+      'Porque es mucho mejor para tu estómago y hace efecto increíblemente rápido. Mezclas 1 scoop en un poco de agua, sabe delicioso, y tu cuerpo lo absorbe en minutos, preparándote para la cama al instante.',
   },
   {
     question: '¿Cómo funciona el pago contra entrega?',
     answer:
-      'Es muy sencillo: haces tu pedido aquí, nosotros te contactamos por WhatsApp para confirmar, y cuando la transportadora (Inter Rapidísimo/Envia) llega a tu puerta, ahí pagas en efectivo o transferencia. Cero riesgos.',
+      'Es súper seguro: haces tu pedido aquí, nosotros te escribimos por WhatsApp para confirmarlo, y se lo pagas en efectivo al mensajero (Inter Rapidísimo o Envia) justo cuando te entregue el producto en tu casa.',
   },
   {
-    question: '¿Cuánto tarda en llegar mi pedido?',
+    question: '¿Cuánto tiempo tarda en llegar mi pedido?',
     answer:
-      'Enviamos en 24-48 horas después de confirmar tu pedido. Ciudades principales suelen recibir en 2-4 días hábiles dependiendo de la transportadora.',
+      'Lo enviamos en máximo 48 horas tras confirmar. Si estás en una ciudad principal, suele llegar en 2 o 4 días hábiles dependiendo de la transportadora.',
   },
 ]
 
@@ -112,25 +109,25 @@ export const TESTIMONIALS = [
   {
     name: 'Carolina M.',
     city: 'Bogotá',
-    text: 'Llevaba meses tomando "gomitas" y amanecía como anestesiada. Con este cóctel me duermo en 20 minutos de forma súper natural y despierto lista para entrenar. El sabor es increíble.',
+    text: 'Llevaba meses sintiéndome pesada por culpa de unas pastillas para dormir. Con esta bebida me relajo en 20 minutos de forma súper suave y al día siguiente tengo muchísima energía. El sabor es riquísimo.',
     rating: 5,
   },
   {
     name: 'Andrés R.',
     city: 'Medellín',
-    text: 'Escuché a Andrew Huberman hablar de este stack y armarlo por mi cuenta con 3 pastillas distintas era carísimo. Cocon lo tiene todo en un solo scoop. Funciona desde la primera noche.',
+    text: 'Yo no quería meterle químicos a mi cuerpo. Encontrar algo que fuera puro magnesio y plantas me salvó la vida. Duermo de corrido hasta la alarma.',
     rating: 5,
   },
   {
     name: 'María José L.',
     city: 'Cali',
-    text: 'Me daba miedo depender de pastillas hormonales para dormir. Una bebida relajante de magnesio y teanina fue la mejor alternativa neuro-saludable. Descanso profundo y cero resaca.',
+    text: 'Me daba pánico volverme adicta a los somníferos. Mi doctor me recomendó buscar algo natural y Cocon es una maravilla. Descanso mi mente y no tengo resaca.',
     rating: 5,
   },
   {
     name: 'Santiago P.',
     city: 'Barranquilla',
-    text: 'Trabajo turnos nocturnos y la melatonina me arruinaba el ciclo natural al despertar. Con Cocon me relajo y me adapto mucho más rápido sin químicos duros. Súper recomendado.',
+    text: 'Por mi trabajo tengo turnos horribles y no lograba acomodar el sueño. Un vaso de esto frío antes de acostarme me relaja perfecto. Además llega rápido a la casa.',
     rating: 4,
   },
 ]
