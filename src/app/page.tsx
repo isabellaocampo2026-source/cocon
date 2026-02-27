@@ -15,9 +15,9 @@ function StructuredData() {
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
-    name: 'Cocon — Gomitas de Melatonina',
+    name: 'Cocon — El Cóctel del Sueño (Huberman Stack)',
     description:
-      'Gomitas naturales de melatonina para dormir mejor. Sin pastillas, sin receta, sin dependencia.',
+      'Suplemento nutricional nocturno en polvo. Magnesio, L-Teanina y Apigenina para un descanso profundo y reparación muscular celular sin alterar las hormonas.',
     brand: {
       '@type': 'Brand',
       name: 'Cocon',
@@ -25,7 +25,7 @@ function StructuredData() {
     offers: [
       {
         '@type': 'Offer',
-        name: '1 Paquete (30 gomitas)',
+        name: '1 Frasco (30 scoops)',
         price: '49900',
         priceCurrency: 'COP',
         availability: 'https://schema.org/InStock',
@@ -48,7 +48,7 @@ function StructuredData() {
       },
       {
         '@type': 'Offer',
-        name: '2 Paquetes (60 gomitas)',
+        name: '2 Frascos (60 scoops)',
         price: '89900',
         priceCurrency: 'COP',
         availability: 'https://schema.org/InStock',
@@ -63,7 +63,7 @@ function StructuredData() {
       },
       {
         '@type': 'Offer',
-        name: '3 Paquetes (90 gomitas)',
+        name: '3 Frascos (90 scoops)',
         price: '119900',
         priceCurrency: 'COP',
         availability: 'https://schema.org/InStock',
@@ -148,10 +148,7 @@ export default function Home() {
           <p suppressHydrationWarning className="text-xs text-white/25">
             © {new Date().getFullYear()} Cocon. Todos los derechos reservados.
           </p>
-          <p className="text-[10px] text-white/15 max-w-md mx-auto">
-            Este producto no es un medicamento. La melatonina es un suplemento
-            alimenticio. Consulta a tu médico si tienes condiciones especiales.
-          </p>
+          Este producto es un suplemento dietario, no es un medicamento y no suple una alimentación equilibrada. Consulta a tu médico si tienes condiciones médicas preexistentes.
         </div>
       </footer>
 

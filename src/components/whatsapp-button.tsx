@@ -17,10 +17,10 @@ export function WhatsAppButton() {
     }, [])
 
     const whatsappNumber = '573053476462'
-    const whatsappMessage = encodeURIComponent(
-        'Hola, me interesa saber más sobre las gomitas Cocon para dormir 🌙'
+    const message = encodeURIComponent(
+        'Hola, me interesa saber más sobre el Sleep Cocktail Cocon 🌙'
     )
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`
 
     if (!isMounted) return null
 

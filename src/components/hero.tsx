@@ -19,12 +19,12 @@ export function Hero() {
                         <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-[120%] lg:-ml-8 xl:-ml-12 lg:scale-105 transition-transform duration-700">
                             {/* Backdrop highlight for the product */}
                             <div className="absolute inset-0 bg-brand-lighter rounded-full transform scale-90 blur-3xl opacity-60"></div>
+                            {/* Placeholder for the new powder tub image */}
                             <img
                                 src="/paquete_gomitas.png"
-                                alt="Cocon Gomitas de Melatonina"
+                                alt="Cocon Sleep Cocktail Polvo"
                                 className="relative z-10 w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                             />
-                            {/* Trust Badge overlay REMOVED */}
                         </div>
                     </div>
 
@@ -45,19 +45,19 @@ export function Hero() {
 
                         {/* Main Headline */}
                         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] text-base-text tracking-tight mb-6">
-                            Apaga tu cerebro y <span className="text-brand">duerme de corrido.</span>
+                            Nutre tu cerebro y <span className="text-brand">optimiza tu descanso.</span>
                         </h1>
 
                         {/* Subheadline */}
                         <p className="text-lg text-base-muted mb-8 max-w-xl leading-relaxed">
-                            Gomitas de melatonina y extractos botánicos que te ayudan a conciliar el sueño en menos de 30 minutos. <strong>Sin receta, sin crear dependencia y sin sentirte mareado al día siguiente.</strong>
+                            El <strong>Cóctel del Sueño</strong> (Huberman Stack) en polvo. Magnesio, L-Teanina y Apigenina para un sueño profundo y recuperación celular. <br /><br /><strong>0% hormonas, 0% resaca, 100% natural.</strong>
                         </p>
 
                         {/* Quick Benefits / Bullet Points */}
                         <ul className="space-y-3 mb-10">
                             {[
-                                'Acción rápida (en 30 mins)',
-                                'Delicioso sabor a mora de origen natural',
+                                'Absorción ultra-rápida (1 scoop en agua)',
+                                'Sabor refrescante a mora azul',
                                 'Pago contra entrega en todo Colombia'
                             ].map((benefit, i) => (
                                 <li key={i} className="flex items-start gap-3">

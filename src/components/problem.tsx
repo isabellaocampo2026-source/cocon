@@ -5,19 +5,19 @@ import { useEffect, useRef } from 'react'
 const PAIN_POINTS = [
     {
         title: 'Horas dando vueltas',
-        desc: 'Tu mente no se apaga aunque tu cuerpo esté agotado.',
+        desc: 'Tu mente no se apaga aunque tu cuerpo esté agotado físicamente.',
     },
     {
         title: 'Despertar a medias',
-        desc: 'Sientes que no descansaste nada y la fatiga te arrastra todo el día.',
+        desc: 'Sientes que no descansaste nada y la fatiga te arrastra por el resto del día.',
     },
     {
-        title: 'Páginas y tés',
-        desc: 'Ya probaste remedios caseros, meditaciones y tés que no hacen efecto.',
+        title: 'Soluciones a medias',
+        desc: 'Ya probaste tés de supermercado que no hacen efecto o pastillas que dañan el estómago.',
     },
     {
-        title: 'Miedo a las pastillas',
-        desc: 'No quieres depender de químicos fuertes ni sentir resaca medicamentosa.',
+        title: 'Resaca de melatonina',
+        desc: 'Dependes de químicos o de hormonas sintéticas que atrofian tu producción natural y te dejan atontado al despertar.',
     },
 ]
 
@@ -54,11 +54,10 @@ export function Problem() {
                         El Problema
                     </span>
                     <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-base-text tracking-tight">
-                        Dar vueltas a las 3:00 AM <br className="hidden sm:block" /> no es vida.
+                        Dar vueltas a las 3:00 AM <br className="hidden sm:block" /> atrofia tu cuerpo y mente.
                     </h2>
                     <p className="text-lg text-base-muted max-w-2xl mx-auto">
-                        Más de 4 millones de colombianos sufren de insomnio crónico.
-                        No estás solo en esto.
+                        Depender de somníferos o forzar el sueño con pastillas hormonales no resuelve la raíz del problema. Tu cerebro simplemente está desnutrido de los minerales que lo relajan.
                     </p>
                 </div>
 

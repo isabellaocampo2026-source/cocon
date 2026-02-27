@@ -10,30 +10,31 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Cocon | Gomitas Naturales de Melatonina para Dormir Mejor',
+  title: 'Cocon | El Cóctel del Sueño (Magnesio, Teanina, Apigenina)',
   description:
-    'Duerme en menos de 30 minutos con gomitas naturales de melatonina. Sin pastillas, sin receta, sin dependencia. Pago contra entrega en toda Colombia.',
+    'El suplemento nocturno definitivo en polvo. Nutrición cerebral para un descanso profundo sin hormonas ni resaca. Pago contra entrega en toda Colombia.',
   keywords: [
-    'gomitas melatonina',
-    'melatonina colombia',
-    'gomitas para dormir',
-    'suplemento natural para dormir',
-    'pago contra entrega',
+    'magnesio para dormir',
+    'l-teanina ansiedad',
+    'apigenina',
+    'sleep cocktail colombia',
+    'suplemento sueño natural',
   ],
+  authors: [{ name: 'Cocon' }],
   openGraph: {
-    title: 'Cocon | Gomitas de Melatonina — Duerme en 30 minutos',
+    title: 'Cocon | Sleep Cocktail — Duerme Profundo',
     description:
-      'Gomitas naturales de melatonina. Sin pastillas, sin receta. Pago contra entrega en toda Colombia.',
-    url: 'https://cocon.com.co',
+      'El Cóctel del Sueño (Huberman Stack). Nutrición cerebral sin dependencia.',
+    url: 'https://cocon.co',
     siteName: 'Cocon',
     locale: 'es_CO',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cocon | Gomitas de Melatonina para Dormir',
+    title: 'Cocon | Sleep Cocktail Cocon',
     description:
-      'Duerme en menos de 30 minutos. Gomitas naturales. Pago contra entrega.',
+      'Descanso profundo y óptimo. Bebida relajante natural de absorción inmediata.',
   },
   robots: {
     index: true,
