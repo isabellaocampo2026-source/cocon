@@ -46,41 +46,41 @@ export function Testimonials() {
     }, [])
 
     return (
-        <section ref={sectionRef} className="py-20 sm:py-28 px-4 bg-[#141428]/50">
+        <section ref={sectionRef} className="py-20 sm:py-28 px-4 bg-brand-lighter/30">
             <div className="max-w-5xl mx-auto">
                 <div className="fade-section text-center mb-14">
-                    <p className="text-[#8B5CF6] font-semibold text-sm uppercase tracking-widest mb-3">
-                        Testimonios
-                    </p>
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-3">
+                    <span className="text-brand font-bold tracking-wider uppercase text-sm mb-3 block">
+                        Testimonios Reales
+                    </span>
+                    <h2 className="text-3xl sm:text-4xl font-bold mb-3 text-base-text">
                         Lo que dicen nuestros clientes
                     </h2>
-                    <p className="text-white/40 text-sm">
-                        Resultados reales de usuarios de melatonina
+                    <p className="text-base-muted text-sm">
+                        Resultados de personas reales que ya duermen mejor.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     {TESTIMONIALS.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="fade-section glass-card p-6 transition-all duration-300 hover:border-white/15 hover:bg-white/[0.04]"
+                            className="fade-section bg-white p-8 rounded-2xl shadow-sm border border-brand-lighter transition-shadow hover:shadow-card"
                             style={{ transitionDelay: `${index * 100}ms` }}
                         >
                             <StarRating rating={testimonial.rating} />
-                            <p className="text-white/75 mt-4 mb-5 leading-relaxed text-[15px] italic">
+                            <p className="text-base-text mt-4 mb-6 leading-relaxed italic">
                                 &ldquo;{testimonial.text}&rdquo;
                             </p>
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-center gap-4">
                                 {/* Avatar placeholder */}
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] flex items-center justify-center text-white font-bold text-sm">
+                                <div className="w-12 h-12 rounded-full bg-brand-lighter text-brand flex items-center justify-center font-bold text-lg">
                                     {testimonial.name.charAt(0)}
                                 </div>
                                 <div>
-                                    <p className="text-white font-medium text-sm">
+                                    <p className="text-base-text font-bold">
                                         {testimonial.name}
                                     </p>
-                                    <p className="text-white/40 text-xs">{testimonial.city}</p>
+                                    <p className="text-base-muted text-sm">{testimonial.city}</p>
                                 </div>
                             </div>
                         </div>

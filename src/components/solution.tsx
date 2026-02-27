@@ -2,24 +2,33 @@
 
 import { useEffect, useRef } from 'react'
 
-const STEPS = [
+const INGREDIENTS = [
     {
-        number: '1',
-        icon: '🍬',
-        title: 'Comes 2 gomitas',
-        desc: '30 minutos antes de dormir',
+        title: 'Melatonina Pura',
+        desc: 'La hormona natural que le dice a tu cerebro que es hora de dormir. Ayuda a regular tu ciclo circadiano rápido.',
+        icon: (
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+        )
     },
     {
-        number: '2',
-        icon: '😌',
-        title: 'Tu cuerpo se relaja',
-        desc: 'La melatonina activa tu ciclo natural de sueño',
+        title: 'Extractos Botánicos',
+        desc: 'Manzanilla, Toronjil y Pasiflora. Una mezcla herbal probada por siglos para calmar el sistema nervioso.',
+        icon: (
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+        )
     },
     {
-        number: '3',
-        icon: '😴',
-        title: 'Te duermes profundamente',
-        desc: 'Y despiertas descansado(a), sin groggy',
+        title: 'Cero Azúcar Añadida',
+        desc: 'Sabor delicioso a mora con endulzantes naturales. No rompe tu dieta ni dispara tu insulina antes de dormir.',
+        icon: (
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+        )
     },
 ]
 
@@ -48,60 +57,55 @@ export function Solution() {
     }, [])
 
     return (
-        <section ref={sectionRef} className="py-20 sm:py-28 px-4 bg-[#141428]/50">
-            <div className="max-w-4xl mx-auto">
+        <section ref={sectionRef} className="py-20 sm:py-28 px-4 bg-brand-lighter/30">
+            <div className="max-w-5xl mx-auto">
                 {/* Heading */}
                 <div className="fade-section text-center mb-16">
-                    <p className="text-[#8B5CF6] font-semibold text-sm uppercase tracking-widest mb-3">
-                        La solución
-                    </p>
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                        Conoce{' '}
-                        <span className="bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] bg-clip-text text-transparent">
-                            Cocon
-                        </span>
+                    <span className="text-brand font-bold tracking-wider uppercase text-sm mb-3 block">
+                        Fórmula Natural
+                    </span>
+                    <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-base-text tracking-tight">
+                        Por qué Cocon funciona tan bien
                     </h2>
-                    <p className="text-white/60 text-lg max-w-xl mx-auto">
-                        Gomitas de melatonina + extractos naturales relajantes.
-                        <br />
-                        Tu nuevo aliado para dormir mejor.
+                    <p className="text-base-muted text-lg max-w-2xl mx-auto">
+                        A diferencia de los somníferos fuertes de farmacia, Cocon trabaja <strong>con</strong> tu cuerpo, no en contra de él. Combinamos ciencia moderna con sabiduría botánica.
                     </p>
                 </div>
 
-                {/* 3 Steps */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-                    {STEPS.map((step, index) => (
+                {/* 3 Ingredients */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    {INGREDIENTS.map((item, index) => (
                         <div
                             key={index}
-                            className="fade-section glass-card p-6 text-center relative group transition-all duration-300 hover:border-[#7C3AED]/30 hover:bg-[#7C3AED]/5"
+                            className="fade-section bg-white p-8 rounded-2xl shadow-sm border border-brand-lighter text-center group hover:-translate-y-1 transition-transform duration-300"
                             style={{ transitionDelay: `${index * 150}ms` }}
                         >
-                            {/* Step number */}
-                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-7 h-7 rounded-full bg-[#7C3AED] text-white text-xs font-bold flex items-center justify-center">
-                                {step.number}
+                            <div className="w-14 h-14 mx-auto rounded-full bg-brand/5 text-brand flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                                {item.icon}
                             </div>
-                            <div className="text-4xl mb-4 mt-2">{step.icon}</div>
-                            <h3 className="text-lg font-semibold mb-2 text-white">
-                                {step.title}
+                            <h3 className="text-xl font-bold mb-3 text-base-text">
+                                {item.title}
                             </h3>
-                            <p className="text-white/50 text-sm leading-relaxed">
-                                {step.desc}
+                            <p className="text-base-muted leading-relaxed">
+                                {item.desc}
                             </p>
                         </div>
                     ))}
                 </div>
 
-                {/* Why gummy not pill */}
-                <div className="fade-section glass-card p-8 sm:p-10 text-center max-w-2xl mx-auto">
-                    <h3 className="text-xl font-semibold mb-3">
-                        ¿Por qué gomita y no pastilla?
-                    </h3>
-                    <p className="text-white/60 leading-relaxed">
-                        Las gomitas tienen <span className="text-white font-medium">mejor absorción sublingual</span> que las pastillas,
-                        son más fáciles de tomar, y son <span className="text-white font-medium">mucho más ricas</span>.
-                        No estarás forzándote a tomar algo que no te gusta —
-                        le vas a esperar con ganas a la hora de dormir.
-                    </p>
+                {/* Why gummy callout */}
+                <div className="fade-section bg-white border border-gray-100 p-8 sm:p-10 rounded-2xl shadow-card text-center max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-8">
+                    <div className="flex-shrink-0">
+                        <img src="/paquete_gomitas.png" alt="Gomitas Cocon" className="w-32 object-contain" />
+                    </div>
+                    <div className="text-left">
+                        <h3 className="text-xl font-bold text-base-text mb-3">
+                            ¿Por qué gomitas y no pastillas?
+                        </h3>
+                        <p className="text-base-muted leading-relaxed">
+                            Las gomitas tienen <strong>mejor absorción sublingual</strong> que las pastillas sólidas. Pasan a tu torrente sanguíneo más rápido y, lo más importante: son tan ricas que nunca olvidarás tomarlas.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>

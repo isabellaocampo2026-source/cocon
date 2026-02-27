@@ -4,20 +4,20 @@ import { useEffect, useRef } from 'react'
 
 const PAIN_POINTS = [
     {
-        icon: '😩',
-        text: 'Das vueltas en la cama por horas',
+        title: 'Horas dando vueltas',
+        desc: 'Tu mente no se apaga aunque tu cuerpo esté agotado.',
     },
     {
-        icon: '🧟',
-        text: 'Llegas zombi al trabajo',
+        title: 'Despertar a medias',
+        desc: 'Sientes que no descansaste nada y la fatiga te arrastra todo el día.',
     },
     {
-        icon: '🍵',
-        text: 'Ya probaste tés y remedios caseros',
+        title: 'Páginas y tés',
+        desc: 'Ya probaste remedios caseros, meditaciones y tés que no hacen efecto.',
     },
     {
-        icon: '💊',
-        text: 'Te da miedo depender de pastillas químicas',
+        title: 'Miedo a las pastillas',
+        desc: 'No quieres depender de químicos fuertes ni sentir resaca medicamentosa.',
     },
 ]
 
@@ -46,40 +46,43 @@ export function Problem() {
     }, [])
 
     return (
-        <section ref={sectionRef} className="py-20 sm:py-28 px-4">
-            <div className="max-w-3xl mx-auto">
+        <section ref={sectionRef} className="py-20 sm:py-28 px-4 bg-white">
+            <div className="max-w-4xl mx-auto">
                 {/* Section heading */}
-                <div className="fade-section text-center mb-14">
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-                        ¿Te suena familiar?
+                <div className="fade-section text-center mb-16">
+                    <span className="text-brand font-bold tracking-wider uppercase text-sm mb-3 block">
+                        El Problema
+                    </span>
+                    <h2 className="text-3xl sm:text-5xl font-bold mb-6 text-base-text tracking-tight">
+                        Dar vueltas a las 3:00 AM <br className="hidden sm:block" /> no es vida.
                     </h2>
-                    <div className="w-16 h-1 bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] mx-auto rounded-full" />
+                    <p className="text-lg text-base-muted max-w-2xl mx-auto">
+                        Más de 4 millones de colombianos sufren de insomnio crónico.
+                        No estás solo en esto.
+                    </p>
                 </div>
 
                 {/* Pain points grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                     {PAIN_POINTS.map((point, index) => (
                         <div
                             key={index}
-                            className="fade-section glass-card p-5 flex items-center gap-4 transition-all duration-300 hover:border-white/15 hover:bg-white/[0.05]"
+                            className="fade-section flex gap-4 p-6 rounded-2xl bg-base-bg border border-gray-100 hover:shadow-card transition-shadow"
                             style={{ transitionDelay: `${index * 100}ms` }}
                         >
-                            <span className="text-3xl flex-shrink-0">{point.icon}</span>
-                            <span className="text-white/80 text-base leading-snug">
-                                {point.text}
-                            </span>
+                            <div className="flex-shrink-0 mt-1">
+                                <div className="w-8 h-8 rounded-full bg-brand-lighter text-brand flex items-center justify-center font-bold">
+                                    ✕
+                                </div>
+                            </div>
+                            <div>
+                                <h3 className="text-lg font-bold text-base-text mb-2">{point.title}</h3>
+                                <p className="text-base-muted leading-relaxed">
+                                    {point.desc}
+                                </p>
+                            </div>
                         </div>
                     ))}
-                </div>
-
-                {/* Stat callout */}
-                <div className="fade-section text-center">
-                    <p className="text-white/50 text-base leading-relaxed max-w-lg mx-auto">
-                        No estás solo.{' '}
-                        <span className="text-white font-semibold">
-                            4 de cada 10 colombianos no duermen bien.
-                        </span>
-                    </p>
                 </div>
             </div>
         </section>

@@ -3,11 +3,11 @@
 import { useEffect, useRef } from 'react'
 
 const ROWS = [
-    { criteria: 'Dependencia', pills: 'Sí', cocon: 'No' },
-    { criteria: 'Receta médica', pills: 'Necesaria', cocon: 'No necesaria' },
-    { criteria: 'Sabor', pills: 'Desagradable', cocon: 'Delicioso' },
-    { criteria: 'Efecto mañana', pills: 'Groggy', cocon: 'Fresco' },
-    { criteria: 'Composición', pills: 'Químico', cocon: '100% Natural' },
+    { criteria: 'Genera Dependencia', pills: 'Sí', cocon: 'No' },
+    { criteria: 'Requiere receta médica', pills: 'Sí', cocon: 'No' },
+    { criteria: 'Sabor', pills: 'Químico desagradable', cocon: 'Delicioso a mora' },
+    { criteria: 'Efecto al día siguiente', pills: 'Sensación de resaca', cocon: 'Mente clara' },
+    { criteria: 'Ingredientes principales', pills: 'Químicos sintéticos', cocon: 'Botánicos naturales' },
 ]
 
 export function Comparison() {
@@ -35,29 +35,26 @@ export function Comparison() {
     }, [])
 
     return (
-        <section ref={sectionRef} className="py-20 sm:py-28 px-4">
-            <div className="max-w-3xl mx-auto">
-                <div className="fade-section text-center mb-12">
-                    <p className="text-[#8B5CF6] font-semibold text-sm uppercase tracking-widest mb-3">
+        <section ref={sectionRef} className="py-20 sm:py-28 px-4 bg-white">
+            <div className="max-w-4xl mx-auto">
+                <div className="fade-section text-center mb-16">
+                    <span className="text-brand font-bold tracking-wider uppercase text-sm mb-3 block">
                         Comparación
-                    </p>
-                    <h2 className="text-3xl sm:text-4xl font-bold">
-                        Pastillas vs.{' '}
-                        <span className="bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] bg-clip-text text-transparent">
-                            Cocon
-                        </span>
+                    </span>
+                    <h2 className="text-3xl sm:text-5xl font-bold text-base-text">
+                        Por qué elegir <span className="text-brand">Cocon</span>
                     </h2>
                 </div>
 
-                <div className="fade-section glass-card overflow-hidden">
+                <div className="fade-section bg-white rounded-2xl shadow-card border border-brand-lighter overflow-hidden">
                     {/* Table header */}
-                    <div className="grid grid-cols-3 border-b border-white/10">
-                        <div className="p-4 sm:p-5 text-white/40 text-sm font-medium" />
-                        <div className="p-4 sm:p-5 text-center text-white/50 text-sm font-semibold uppercase tracking-wider">
-                            Pastillas
+                    <div className="grid grid-cols-3 border-b border-brand-lighter bg-base-bg">
+                        <div className="p-4 sm:p-6" />
+                        <div className="p-4 sm:p-6 text-center text-base-muted text-sm font-bold uppercase tracking-wider">
+                            Somníferos Comunes
                         </div>
-                        <div className="p-4 sm:p-5 text-center bg-[#7C3AED]/10 text-[#8B5CF6] text-sm font-semibold uppercase tracking-wider">
-                            Cocon ✨
+                        <div className="p-4 sm:p-6 text-center bg-brand-lighter/50 text-brand text-sm font-bold uppercase tracking-wider">
+                            Gomitas Cocon
                         </div>
                     </div>
 
@@ -65,19 +62,19 @@ export function Comparison() {
                     {ROWS.map((row, index) => (
                         <div
                             key={index}
-                            className={`grid grid-cols-3 ${index < ROWS.length - 1 ? 'border-b border-white/5' : ''
-                                } transition-colors hover:bg-white/[0.02]`}
+                            className={`grid grid-cols-3 ${index < ROWS.length - 1 ? 'border-b border-gray-100' : ''
+                                }`}
                         >
-                            <div className="p-4 sm:p-5 text-white/70 text-sm font-medium flex items-center">
+                            <div className="p-4 sm:p-6 text-base-text font-medium flex items-center">
                                 {row.criteria}
                             </div>
-                            <div className="p-4 sm:p-5 text-center flex items-center justify-center gap-2">
-                                <span className="text-[#F87171]">✗</span>
-                                <span className="text-white/40 text-sm">{row.pills}</span>
+                            <div className="p-4 sm:p-6 text-center flex items-center justify-center gap-2">
+                                <span className="text-accent-red font-bold">✕</span>
+                                <span className="text-base-muted text-sm">{row.pills}</span>
                             </div>
-                            <div className="p-4 sm:p-5 text-center bg-[#7C3AED]/5 flex items-center justify-center gap-2">
-                                <span className="text-[#34D399]">✓</span>
-                                <span className="text-white/80 text-sm font-medium">{row.cocon}</span>
+                            <div className="p-4 sm:p-6 text-center bg-brand-lighter/20 flex items-center justify-center gap-2">
+                                <span className="text-accent-green font-bold text-lg">✓</span>
+                                <span className="text-base-text text-sm font-semibold">{row.cocon}</span>
                             </div>
                         </div>
                     ))}

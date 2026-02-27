@@ -50,7 +50,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es-CO" className={inter.variable}>
-      <body className="bg-[#0D0D1A] text-white antialiased font-sans">
+      <body className="bg-base-bg text-base-text antialiased font-sans">
         {children}
         {GOOGLE_ADS_ID && GOOGLE_ADS_ID !== 'AW-XXXXXXXXX' && (
           <>

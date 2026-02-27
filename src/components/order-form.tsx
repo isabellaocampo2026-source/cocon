@@ -137,77 +137,76 @@ export function OrderForm() {
         <section
             ref={sectionRef}
             id="order-form"
-            className="py-20 sm:py-28 px-4 scroll-mt-12"
+            className="py-20 sm:py-28 px-4 scroll-mt-12 bg-base-bg"
         >
             <div className="max-w-xl mx-auto">
                 <div className="fade-section text-center mb-12">
-                    <p className="text-[#8B5CF6] font-semibold text-sm uppercase tracking-widest mb-3">
-                        Haz tu pedido
-                    </p>
-                    <h2 className="text-3xl sm:text-4xl font-bold mb-3">
-                        Pide tus gomitas{' '}
-                        <span className="bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] bg-clip-text text-transparent">
-                            Cocon
-                        </span>
+                    <span className="text-brand font-bold tracking-wider uppercase text-sm mb-3 block">
+                        Paso Final
+                    </span>
+                    <h2 className="text-3xl sm:text-5xl font-bold mb-3 text-base-text tracking-tight">
+                        Elige tu paquete
                     </h2>
-                    <p className="text-white/50 text-sm">
-                        Solo pagas cuando recibas el producto en tu puerta
+                    <p className="text-base-muted text-sm sm:text-base">
+                        Selecciona la cantidad y paga solo cuando te entreguemos el producto en la puerta de tu casa.
                     </p>
                 </div>
 
                 <form
                     onSubmit={handleSubmit}
-                    className="fade-section glass-card p-6 sm:p-8 space-y-6"
+                    className="fade-section bg-white rounded-2xl shadow-card border border-gray-100 p-6 sm:p-8 space-y-6"
                 >
                     {/* Variant selector */}
-                    <div className="space-y-3">
+                    <div className="space-y-4">
                         {VARIANTS.map((v) => (
                             <label
                                 key={v.id}
                                 className={`
-                  flex items-center justify-between p-4 rounded-2xl border-2 
-                  cursor-pointer transition-all duration-200
+                  flex items-center justify-between p-4 sm:p-5 rounded-xl border-2 
+                  cursor-pointer transition-all duration-200 block w-full
                   ${variant === v.id
-                                        ? 'border-[#7C3AED] bg-[#7C3AED]/10'
-                                        : 'border-white/10 hover:border-white/25'
+                                        ? 'border-brand bg-brand-lighter/20 ring-1 ring-brand'
+                                        : 'border-gray-200 hover:border-gray-300 bg-white'
                                     }
                 `}
                             >
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-4">
                                     <input
                                         type="radio"
                                         name="variant"
                                         value={v.id}
                                         checked={variant === v.id}
                                         onChange={() => setVariant(v.id)}
-                                        className="accent-[#7C3AED] w-4 h-4"
+                                        className="accent-brand w-5 h-5 flex-shrink-0"
                                     />
                                     <div>
-                                        <span className="font-medium text-white text-sm sm:text-base">
-                                            {v.label}
-                                        </span>
-                                        {v.popular && (
-                                            <span className="ml-2 text-xs bg-[#7C3AED] text-white px-2.5 py-0.5 rounded-full font-medium">
-                                                Más popular
+                                        <div className="flex items-center flex-wrap gap-2 mb-1">
+                                            <span className="font-bold text-base-text text-base sm:text-lg leading-none">
+                                                {v.label}
                                             </span>
-                                        )}
-                                        {v.best && (
-                                            <span className="ml-2 text-xs bg-[#34D399] text-black px-2.5 py-0.5 rounded-full font-medium">
-                                                Mejor precio
-                                            </span>
-                                        )}
+                                            {v.popular && (
+                                                <span className="text-[10px] sm:text-xs bg-brand text-white px-2 py-0.5 rounded uppercase font-bold tracking-wide">
+                                                    Más Popular
+                                                </span>
+                                            )}
+                                            {v.best && (
+                                                <span className="text-[10px] sm:text-xs bg-accent-gold text-white px-2 py-0.5 rounded uppercase font-bold tracking-wide">
+                                                    Mejor Valor
+                                                </span>
+                                            )}
+                                        </div>
                                         {v.shipping === 0 ? (
-                                            <span className="block text-xs text-[#34D399] mt-0.5">
-                                                Envío gratis
+                                            <span className="block text-sm font-semibold text-accent-green">
+                                                Envío Gratis
                                             </span>
                                         ) : (
-                                            <span className="block text-xs text-white/40 mt-0.5">
+                                            <span className="block text-sm text-base-muted">
                                                 + {formatPrice(v.shipping)} envío
                                             </span>
                                         )}
                                     </div>
                                 </div>
-                                <span className="text-base sm:text-lg font-bold text-white">
+                                <span className="text-lg sm:text-xl font-black text-brand text-right">
                                     {formatPrice(v.total)}
                                 </span>
                             </label>
@@ -216,10 +215,10 @@ export function OrderForm() {
 
                     {/* Price summary */}
                     {selectedVariant && (
-                        <div className="text-center py-3 rounded-xl bg-white/5 border border-white/5">
-                            <p className="text-white/50 text-sm">
+                        <div className="text-center py-4 rounded-xl bg-gray-50 border border-gray-100">
+                            <p className="text-base-muted text-sm sm:text-base">
                                 Total a pagar al recibir:{' '}
-                                <span className="text-white font-bold text-lg">
+                                <span className="text-base-text font-black text-xl sm:text-2xl ml-2">
                                     {formatPrice(selectedVariant.total)}
                                 </span>
                             </p>
@@ -227,7 +226,9 @@ export function OrderForm() {
                     )}
 
                     {/* Form fields */}
-                    <div className="space-y-4">
+                    <div className="space-y-4 pt-4 border-t border-gray-100">
+                        <h3 className="font-bold text-base-text text-lg mb-4">Datos de Envío</h3>
+
                         <div>
                             <input
                                 required
@@ -236,11 +237,11 @@ export function OrderForm() {
                                 onChange={(e) =>
                                     setForm({ ...form, fullName: e.target.value })
                                 }
-                                className={`w-full p-4 rounded-xl bg-white/5 border text-white placeholder:text-white/30 
-                  focus:outline-none transition duration-200 text-sm
+                                className={`w-full p-4 rounded-xl bg-gray-50 border text-base-text placeholder:text-gray-400 
+                  focus:outline-none focus:bg-white transition duration-200 text-base
                   ${form.fullName && form.fullName.trim().length >= 2
-                                        ? 'border-[#34D399]/40 focus:border-[#34D399]'
-                                        : 'border-white/10 focus:border-[#7C3AED]'
+                                        ? 'border-brand/40 focus:border-brand ring-1 ring-brand/0 focus:ring-brand/20'
+                                        : 'border-gray-200 focus:border-brand ring-1 ring-transparent focus:ring-brand/20'
                                     }`}
                             />
                         </div>
@@ -257,18 +258,18 @@ export function OrderForm() {
                                     const val = e.target.value.replace(/\D/g, '')
                                     setForm({ ...form, phone: val })
                                 }}
-                                className={`w-full p-4 rounded-xl bg-white/5 border text-white placeholder:text-white/30 
-                  focus:outline-none transition duration-200 text-sm
+                                className={`w-full p-4 rounded-xl bg-gray-50 border text-base-text placeholder:text-gray-400 
+                  focus:outline-none focus:bg-white transition duration-200 text-base
                   ${form.phone.length > 0
                                         ? isPhoneValid
-                                            ? 'border-[#34D399]/40 focus:border-[#34D399]'
-                                            : 'border-[#F87171]/40 focus:border-[#F87171]'
-                                        : 'border-white/10 focus:border-[#7C3AED]'
+                                            ? 'border-brand/40 focus:border-brand ring-1 ring-brand/0 focus:ring-brand/20'
+                                            : 'border-accent-red focus:border-accent-red ring-1 ring-transparent focus:ring-accent-red/20'
+                                        : 'border-gray-200 focus:border-brand ring-1 ring-transparent focus:ring-brand/20'
                                     }`}
                             />
                             {form.phone.length > 0 && !isPhoneValid && (
-                                <p className="text-[#F87171] text-xs mt-1.5 ml-1">
-                                    Ingresa un número válido de 10 dígitos que empiece por 3
+                                <p className="text-accent-red text-xs mt-1.5 ml-1 font-medium">
+                                    Ingresa un número válido de 10 dígitos que empiece por 3.
                                 </p>
                             )}
                         </div>
@@ -280,11 +281,11 @@ export function OrderForm() {
                                 list="cities-list"
                                 value={form.city}
                                 onChange={(e) => setForm({ ...form, city: e.target.value })}
-                                className={`w-full p-4 rounded-xl bg-white/5 border text-white placeholder:text-white/30 
-                  focus:outline-none transition duration-200 text-sm
+                                className={`w-full p-4 rounded-xl bg-gray-50 border text-base-text placeholder:text-gray-400 
+                  focus:outline-none focus:bg-white transition duration-200 text-base
                   ${form.city && form.city.trim().length >= 2
-                                        ? 'border-[#34D399]/40 focus:border-[#34D399]'
-                                        : 'border-white/10 focus:border-[#7C3AED]'
+                                        ? 'border-brand/40 focus:border-brand ring-1 ring-brand/0 focus:ring-brand/20'
+                                        : 'border-gray-200 focus:border-brand ring-1 ring-transparent focus:ring-brand/20'
                                     }`}
                             />
                             <datalist id="cities-list">
@@ -302,11 +303,11 @@ export function OrderForm() {
                                 onChange={(e) =>
                                     setForm({ ...form, address: e.target.value })
                                 }
-                                className={`w-full p-4 rounded-xl bg-white/5 border text-white placeholder:text-white/30 
-                  focus:outline-none transition duration-200 text-sm
+                                className={`w-full p-4 rounded-xl bg-gray-50 border text-base-text placeholder:text-gray-400 
+                  focus:outline-none focus:bg-white transition duration-200 text-base
                   ${form.address && form.address.trim().length >= 5
-                                        ? 'border-[#34D399]/40 focus:border-[#34D399]'
-                                        : 'border-white/10 focus:border-[#7C3AED]'
+                                        ? 'border-brand/40 focus:border-brand ring-1 ring-brand/0 focus:ring-brand/20'
+                                        : 'border-gray-200 focus:border-brand ring-1 ring-transparent focus:ring-brand/20'
                                     }`}
                             />
                         </div>
@@ -325,22 +326,22 @@ export function OrderForm() {
                     </div>
 
                     {/* WhatsApp consent */}
-                    <label className="flex items-start gap-3 cursor-pointer group">
+                    <label className="flex items-start gap-3 cursor-pointer group p-4 bg-gray-50 rounded-xl border border-gray-100 mt-2">
                         <input
                             type="checkbox"
                             checked={acceptWhatsApp}
                             onChange={(e) => setAcceptWhatsApp(e.target.checked)}
-                            className="accent-[#7C3AED] mt-1 w-4 h-4 flex-shrink-0"
+                            className="accent-brand mt-0.5 w-5 h-5 flex-shrink-0 cursor-pointer"
                         />
-                        <span className="text-white/50 text-xs leading-relaxed group-hover:text-white/70 transition">
-                            Acepto que me contacten por WhatsApp para confirmar mi pedido
+                        <span className="text-base-muted text-sm leading-snug group-hover:text-base-text transition cursor-pointer">
+                            Acepto que me envíen un mensaje por <strong>WhatsApp</strong> para confirmar mi orden y dirección.
                         </span>
                     </label>
 
                     {/* Error message */}
                     {error && (
-                        <div className="p-3 rounded-xl bg-[#F87171]/10 border border-[#F87171]/20 text-center">
-                            <p className="text-[#F87171] text-sm">{error}</p>
+                        <div className="p-4 rounded-xl bg-red-50 border border-red-100 text-center">
+                            <p className="text-accent-red font-medium text-sm">{error}</p>
                         </div>
                     )}
 
@@ -348,10 +349,10 @@ export function OrderForm() {
                     <button
                         type="submit"
                         disabled={loading || !isFormComplete}
-                        className="w-full py-4 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] text-white font-bold text-base sm:text-lg 
-              transition-all duration-300
-              hover:from-[#8B5CF6] hover:to-[#7C3AED] hover:shadow-[0_0_30px_rgba(124,58,237,0.3)]
-              disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:shadow-none
+                        className="w-full py-5 rounded-xl bg-accent-green text-white font-black text-lg sm:text-xl
+              transition-all duration-300 shadow-lg shadow-accent-green/20
+              hover:bg-accent-greenHover hover:shadow-accent-green/40 hover:-translate-y-0.5
+              disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-none disabled:hover:translate-y-0
               active:scale-[0.98]"
                     >
                         {loading ? (
@@ -375,16 +376,21 @@ export function OrderForm() {
                                         d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
                                     />
                                 </svg>
-                                Enviando...
+                                Procesando Seguro...
                             </span>
                         ) : (
-                            'CONFIRMAR PEDIDO — PAGAS AL RECIBIR'
+                            'COMPLETAR PEDIDO AHORA'
                         )}
                     </button>
 
-                    <p className="text-center text-xs text-white/30">
-                        🔒 Te contactamos por WhatsApp para confirmar. No pagas nada ahora.
-                    </p>
+                    <div className="flex flex-col items-center justify-center gap-2 pt-2">
+                        <div className="flex items-center gap-1.5 text-base-muted text-xs font-medium">
+                            <svg className="w-4 h-4 text-brand" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8V7a4 4 0 00-8 0v4h8z" />
+                            </svg>
+                            Tus datos están protegidos. Pagas en efectivo al repartidor.
+                        </div>
+                    </div>
                 </form>
             </div>
         </section>
