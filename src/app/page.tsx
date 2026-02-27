@@ -1,6 +1,7 @@
 import { Suspense } from 'react'
 import { TopBar } from '@/components/top-bar'
 import { Hero } from '@/components/hero'
+import { PremiumBreak } from '@/components/premium-break'
 import { Problem } from '@/components/problem'
 import { Solution } from '@/components/solution'
 import { Comparison } from '@/components/comparison'
@@ -113,6 +114,7 @@ export default function Home() {
       <TopBar />
       <main>
         <Hero />
+        <PremiumBreak />
         <Problem />
         <Solution />
         <Comparison />
