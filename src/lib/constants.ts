@@ -3,27 +3,27 @@ export const VARIANTS = [
   {
     id: '1-frasco',
     label: '1 Paquete (30 gomitas)',
-    price: 49900,
+    price: 29900,
     shipping: 9900,
-    total: 59800,
+    total: 39800,
     popular: false,
     best: false,
   },
   {
     id: '2-frascos',
     label: '2 Paquetes (60 gomitas)',
-    price: 89900,
+    price: 69900,
     shipping: 0,
-    total: 89900,
+    total: 69900,
     popular: true,
     best: false,
   },
   {
     id: '3-frascos',
     label: '3 Paquetes (90 gomitas)',
-    price: 119900,
+    price: 99900,
     shipping: 0,
-    total: 119900,
+    total: 99900,
     popular: false,
     best: true,
   },
@@ -33,9 +33,9 @@ export type VariantId = (typeof VARIANTS)[number]['id']
 
 // Price map for API validation
 export const PRICES: Record<string, number> = {
-  '1-frasco': 59800,
-  '2-frascos': 89900,
-  '3-frascos': 119900,
+  '1-frasco': 39800,
+  '2-frascos': 69900,
+  '3-frascos': 99900,
 }
 
 // Top 25 Colombian cities for autocomplete

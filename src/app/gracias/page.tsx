@@ -18,7 +18,7 @@ export default function GraciasPage() {
             }
             gtag('event', 'conversion', {
                 send_to: `${GOOGLE_ADS_ID}/${CONVERSION_LABEL}`,
-                value: 89900,
+                value: 69900,
                 currency: 'COP',
                 transaction_id: new Date().getTime().toString()
             })
