@@ -1,38 +1,35 @@
-import type { Metadata } from 'next'
-import Script from 'next/script'
+'use client'
 
-export const metadata: Metadata = {
-    title: '¡Pedido Recibido! | Cocon',
-    robots: { index: false, follow: false },
-}
+import { useEffect } from 'react'
+import Script from 'next/script'
 
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID || ''
 const CONVERSION_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_LABEL || ''
 
 export default function GraciasPage() {
+    useEffect(() => {
+        // En Next.js App Router, usar useEffect asegura que el código se ejecute
+        // incluso en navegaciones internas "suaves" (como cuando vienen de order-form.tsx)
+        if (GOOGLE_ADS_ID && GOOGLE_ADS_ID !== 'AW-XXXXXXXXX' && CONVERSION_LABEL) {
+            window.dataLayer = window.dataLayer || []
+            function gtag(...args: any[]) {
+                window.dataLayer.push(arguments)
+            }
+            gtag('event', 'conversion', {
+                send_to: `${GOOGLE_ADS_ID}/${CONVERSION_LABEL}`,
+                value: 89900,
+                currency: 'COP',
+            })
+            console.log('✅ Google Ads Conversion disparada con éxito:', GOOGLE_ADS_ID, CONVERSION_LABEL)
+        }
+    }, [])
+
     return (
         <main className="min-h-screen flex items-center justify-center p-6 bg-base-bg relative overflow-hidden">
-            {/* Conversion tracking */}
-            {GOOGLE_ADS_ID && GOOGLE_ADS_ID !== 'AW-XXXXXXXXX' && CONVERSION_LABEL && (
-                <Script id="conversion" strategy="lazyOnload">
-                    {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('event', 'conversion', {
-                send_to: '${GOOGLE_ADS_ID}/${CONVERSION_LABEL}',
-                value: 89900,
-                currency: 'COP'
-            });
-          `}
-                </Script>
-            )}
-
             {/* Background glow (Light mode subtle purple) */}
             <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-brand/5 blur-[100px] pointer-events-none" />
 
             <div className="relative text-center max-w-md animate-[fade-in_0.8s_ease-out] bg-white p-8 sm:p-10 rounded-3xl shadow-card border border-gray-100 z-10 block">
-
-
                 <h1 className="text-3xl sm:text-4xl font-black mb-4 text-base-text tracking-tight">
                     ¡Pedido Confirmado!
                 </h1>
