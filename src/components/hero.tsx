@@ -1,6 +1,10 @@
 'use client'
 
+import { useState } from 'react'
+
 export function Hero() {
+    const [activeImage, setActiveImage] = useState('/product-front.png')
+
     const scrollToForm = () => {
         const el = document.getElementById('order-form')
         if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -15,16 +19,34 @@ export function Hero() {
                 <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
 
                     {/* Left Column: Product Image Gallery / Hero Shot */}
-                    <div className="relative mb-12 lg:mb-0 flex justify-center items-center">
+                    <div className="relative mb-12 lg:mb-0 flex flex-col justify-center items-center">
                         <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-[120%] lg:-ml-8 xl:-ml-12 lg:scale-105 transition-transform duration-700">
                             {/* Backdrop highlight for the product */}
                             <div className="absolute inset-0 bg-brand-lighter rounded-full transform scale-90 blur-3xl opacity-60"></div>
-                            {/* Placeholder for the new powder tub image */}
+                            {/* Main Active Image */}
                             <img
-                                src="/paquete_gomitas.png"
+                                src={activeImage}
                                 alt="Cocon Bebida Relajante"
-                                className="relative z-10 w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500"
+                                className="relative z-10 w-full h-auto object-contain drop-shadow-2xl transition-all duration-500 ease-in-out"
                             />
+                        </div>
+
+                        {/* Thumbnail Selector */}
+                        <div className="relative z-20 flex gap-4 mt-8 lg:-ml-8 xl:-ml-12">
+                            <button
+                                onClick={() => setActiveImage('/product-front.png')}
+                                className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all ${activeImage === '/product-front.png' ? 'border-brand scale-110 shadow-lg shadow-brand/20' : 'border-gray-200 hover:border-brand/50 opacity-70 hover:opacity-100'
+                                    }`}
+                            >
+                                <img src="/product-front.png" alt="Frontal" className="w-full h-full object-cover" />
+                            </button>
+                            <button
+                                onClick={() => setActiveImage('/product-back.png')}
+                                className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all ${activeImage === '/product-back.png' ? 'border-brand scale-110 shadow-lg shadow-brand/20' : 'border-gray-200 hover:border-brand/50 opacity-70 hover:opacity-100'
+                                    }`}
+                            >
+                                <img src="/product-back.png" alt="Trasero" className="w-full h-full object-cover" />
+                            </button>
                         </div>
                     </div>
 
