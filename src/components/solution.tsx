@@ -96,7 +96,7 @@ export function Solution() {
                 {/* Why powder callout */}
                 <div className="fade-section bg-white border border-gray-100 p-8 sm:p-10 rounded-2xl shadow-card text-center max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-8">
                     <div className="flex-shrink-0">
-                        <img src="/paquete_gomitas.png" alt="Cocon Bebida" className="w-32 object-contain" />
+                        <img src="/product-front.png" alt="Cocon Bebida" className="w-32 object-contain" />
                     </div>
                     <div className="text-left">
                         <h3 className="text-xl font-bold text-base-text mb-3">
