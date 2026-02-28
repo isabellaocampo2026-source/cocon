@@ -1,8 +1,8 @@
 // Product variants with pricing
 export const VARIANTS = [
   {
-    id: '1-frasco',
-    label: '1 Frasco (30 scoops)',
+    id: '1-bolsa',
+    label: '1 Bolsa (30 scoops)',
     price: 29900,
     shipping: 9900,
     total: 39800,
@@ -10,8 +10,8 @@ export const VARIANTS = [
     best: false,
   },
   {
-    id: '2-frascos',
-    label: '2 Frascos (60 scoops)',
+    id: '2-bolsas',
+    label: '2 Bolsas (60 scoops)',
     price: 69900,
     shipping: 0,
     total: 69900,
@@ -19,8 +19,8 @@ export const VARIANTS = [
     best: false,
   },
   {
-    id: '3-frascos',
-    label: '3 Frascos (90 scoops)',
+    id: '3-bolsas',
+    label: '3 Bolsas (90 scoops)',
     price: 99900,
     shipping: 0,
     total: 99900,
@@ -33,9 +33,9 @@ export type VariantId = (typeof VARIANTS)[number]['id']
 
 // Price map for API validation
 export const PRICES: Record<string, number> = {
-  '1-frasco': 39800,
-  '2-frascos': 69900,
-  '3-frascos': 99900,
+  '1-bolsa': 39800,
+  '2-bolsas': 69900,
+  '3-bolsas': 99900,
 }
 
 // Top 25 Colombian cities for autocomplete

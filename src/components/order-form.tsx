@@ -8,7 +8,7 @@ export function OrderForm() {
     const router = useRouter()
     const params = useSearchParams()
     const sectionRef = useRef<HTMLElement>(null)
-    const [variant, setVariant] = useState('2-frascos')
+    const [variant, setVariant] = useState('2-bolsas')
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState('')
     const [acceptWhatsApp, setAcceptWhatsApp] = useState(false)

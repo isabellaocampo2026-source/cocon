@@ -5,7 +5,6 @@ import { PremiumBreak } from '@/components/premium-break'
 import { Problem } from '@/components/problem'
 import { Solution } from '@/components/solution'
 import { Comparison } from '@/components/comparison'
-import { Testimonials } from '@/components/testimonials'
 import { OrderForm } from '@/components/order-form'
 import { FAQ } from '@/components/faq'
 import { WhatsAppButton } from '@/components/whatsapp-button'
@@ -26,7 +25,7 @@ function StructuredData() {
     offers: [
       {
         '@type': 'Offer',
-        name: '1 Frasco (30 scoops)',
+        name: '1 Bolsa (30 scoops)',
         price: '49900',
         priceCurrency: 'COP',
         availability: 'https://schema.org/InStock',
@@ -49,7 +48,7 @@ function StructuredData() {
       },
       {
         '@type': 'Offer',
-        name: '2 Frascos (60 scoops)',
+        name: '2 Bolsas (60 scoops)',
         price: '89900',
         priceCurrency: 'COP',
         availability: 'https://schema.org/InStock',
@@ -64,7 +63,7 @@ function StructuredData() {
       },
       {
         '@type': 'Offer',
-        name: '3 Frascos (90 scoops)',
+        name: '3 Bolsas (90 scoops)',
         price: '119900',
         priceCurrency: 'COP',
         availability: 'https://schema.org/InStock',
@@ -118,7 +117,6 @@ export default function Home() {
         <Problem />
         <Solution />
         <Comparison />
-        <Testimonials />
         <Suspense fallback={null}>
           <OrderForm />
         </Suspense>
